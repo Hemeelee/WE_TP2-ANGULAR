@@ -1,3 +1,11 @@
+
+TP2 Angular WE Master 1 - 2024-2025
+
+Nom: HUARD Prénom: Emilie Numéro étudiant: 22102536
+
+Modifications apportées:
+-> Toutes les questions ont été réalisées
+
 # Pokedemo
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.8.
