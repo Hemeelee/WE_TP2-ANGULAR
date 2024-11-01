@@ -1,0 +1,35 @@
+<mat-card class="pokemon-card">
+  <mat-card-header>
+    <mat-card-title>
+      <h2>Bienvenue dans le Pokedex</h2>
+    </mat-card-title>
+    <button mat-icon-button (click)="goHome()">
+      <mat-icon>home</mat-icon>
+    </button>
+  </mat-card-header>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Rechercher un Pokémon par ID</mat-label>
+    <input matInput [(ngModel)]="searchPokeId" placeholder="Entrez l'ID du Pokémon" (input)="updatePokemonInfo()">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Chercher un Pokémon par nom</mat-label>
+    <input matInput [(ngModel)]="searchPokeName" placeholder="Entrez le nom du Pokémon" (input)="updatePokemonInfo()">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Sélectionnez un Pokémon</mat-label>
+    <mat-select [(ngModel)]="selectedPokeid" (selectionChange)="onPokemonSelect()">
+      <mat-option *ngFor="let poke of filteredPokes" [value]="poke.id">{{ poke.name }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div style="margin-top: 20px;">
+    <h3 *ngIf="selectedPokename">Le Pokémon est {{ selectedPokename }} avec l'ID {{ selectedPokeid }}</h3>
+
+    <!-- Ajoutez ici une zone pour afficher les détails du Pokémon -->
+    <app-poke-detail [details]="pokeDetails"></app-poke-detail>
+  </div>
+</mat-card>
+<mat-icon></mat-icon>

@@ -1,0 +1,11 @@
+.pokemon-card {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.form-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
